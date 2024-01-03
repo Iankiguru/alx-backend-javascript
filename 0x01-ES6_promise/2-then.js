@@ -1,5 +1,3 @@
-// 2-promise.js
-
 const handleResponseFromAPI = (promise) => {
   return promise
     .then((result) => {
@@ -16,4 +14,3 @@ const handleResponseFromAPI = (promise) => {
 };
 
 export default handleResponseFromAPI;
-
