@@ -10,5 +10,4 @@ const getFullResponseFromAPI = (success) => {
     }
   });
 };
-
 export default getFullResponseFromAPI;
