@@ -1,5 +1,3 @@
-// 0-promise.js
-
 const apiCall = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -15,4 +13,3 @@ const getResponseFromAPI = () => {
 };
 
 export default getResponseFromAPI;
-
