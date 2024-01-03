@@ -1,5 +1,3 @@
-// 3-promise.js
-
 import { uploadPhoto, createUser } from './utils.js';
 
 const handleProfileSignup = () => {
@@ -13,4 +11,3 @@ const handleProfileSignup = () => {
 };
 
 export default handleProfileSignup;
-
