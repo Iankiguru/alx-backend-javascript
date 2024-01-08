@@ -1,5 +1,3 @@
-// 1-get_list_student_ids.js
-
 function getListStudentIds(studentArray) {
   // Check if the argument is an array
   if (!Array.isArray(studentArray)) {
@@ -11,6 +9,4 @@ function getListStudentIds(studentArray) {
 
   return ids;
 }
-
 export default getListStudentIds;
-
