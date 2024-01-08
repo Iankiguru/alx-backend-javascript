@@ -1,5 +1,3 @@
-// 4-update_grade_by_city.js
-
 function updateStudentGradeByCity(studentList, city, newGrades) {
   // Use filter to select students in the specified city
   const selectedStudents = studentList.filter(student => student.location === city);
@@ -17,6 +15,4 @@ function updateStudentGradeByCity(studentList, city, newGrades) {
 
   return updatedStudents;
 }
-
 export default updateStudentGradeByCity;
-
