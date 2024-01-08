@@ -1,5 +1,3 @@
-// 0-get_list_students.js
-
 function getListStudents() {
   // Array of student objects
   const students = [
@@ -10,6 +8,4 @@ function getListStudents() {
 
   return students;
 }
-
 export default getListStudents;
-
