@@ -1,5 +1,3 @@
-// 10-update_uniq_items.js
-
 function updateUniqueItems(groceryMap) {
   // Check if the argument is a Map
   if (!(groceryMap instanceof Map)) {
@@ -13,6 +11,4 @@ function updateUniqueItems(groceryMap) {
     }
   }
 }
-
 export default updateUniqueItems;
-
