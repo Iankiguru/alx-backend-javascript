@@ -1,5 +1,3 @@
-// 8-clean_set.js
-
 function cleanSet(set, startString) {
   // Filter set values that start with startString
   const filteredValues = Array.from(set).filter(value => value.startsWith(startString));
@@ -9,6 +7,4 @@ function cleanSet(set, startString) {
 
   return resultString;
 }
-
 export default cleanSet;
-
