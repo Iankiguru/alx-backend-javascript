@@ -1,5 +1,3 @@
-// 9-groceries_list.js
-
 function groceriesList() {
   // Create a Map of groceries
   const groceryMap = new Map([
@@ -12,6 +10,4 @@ function groceriesList() {
 
   return groceryMap;
 }
-
 export default groceriesList;
-
