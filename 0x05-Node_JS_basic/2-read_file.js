@@ -1,28 +1,31 @@
-// fs- file system module
 const fs = require('fs');
 
-function countStudents(path) {
+function countStudents(filepath) {
+  let content;
   try {
-    const csv = fs.readFileSync(path, 'utf8').split('\n');
-    let students = csv.slice(1);
-    students = students.filter((student) => student);
-    console.log(`Number of students: ${students.length}`);
-    const fields = {};
-    for (const student of students) {
-        const row = student.split(',');
-        if (!fields[row[3]]) fields[row[3]] = [];
-        fields[row[3]].push(row[0]);
-    }
-    delete fields.field;
-    for (const field in fields) {
-      if (field) {
-        console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
-      }
-    }
-  }
-  catch (err) {
+    content = fs.readFileSync(filepath, { encoding: 'utf8', flag: 'r' });
+  } catch (err) {
     throw new Error('Cannot load the database');
   }
+
+  const records = content.split('\n');
+  const computerScienceStudents = [];
+  const softwareEngineeringStudents = [];
+
+  records.forEach((record) => {
+    const field = record.split(',');
+    if (field !== [] && field !== null) {
+      if (field[3] === 'CS') {
+        computerScienceStudents.push(field[0]);
+      } else if (field[3] === 'SWE') {
+        softwareEngineeringStudents.push(field[0]);
+      }
+    }
+  });
+
+  console.log(`Number of students: ${computerScienceStudents.length + softwareEngineeringStudents.length}`);
+  console.log(`Number of students in CS: ${computerScienceStudents.length}. List: ${computerScienceStudents.join(', ')}`);
+  console.log(`Number of students in SWE: ${softwareEngineeringStudents.length}. List: ${softwareEngineeringStudents.join(', ')}`);
 }
 
 module.exports = countStudents;
